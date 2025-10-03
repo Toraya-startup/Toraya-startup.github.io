@@ -235,7 +235,7 @@ body {
 /* プライバシーページ */
 .privacy-content {
   padding: 4rem 0;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -250,42 +250,164 @@ body {
 .last-updated {
   text-align: center;
   color: #666;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   font-size: 0.9rem;
+}
+
+.compliance-badges {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
 }
 
 .privacy-section {
   margin-bottom: 3rem;
   background: white;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #667eea;
 }
 
 .privacy-section h3 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #2c3e50;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   border-bottom: 2px solid #f0f0f0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.8rem;
+  position: relative;
+}
+
+.privacy-section h3::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.privacy-section h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 1.5rem 0 1rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid #667eea;
 }
 
 .privacy-section p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   line-height: 1.8;
   color: #555;
 }
 
 .privacy-section ul {
   margin-left: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .privacy-section li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
+  color: #555;
+  line-height: 1.7;
+  position: relative;
+}
+
+.privacy-section li::before {
+  content: "•";
+  color: #667eea;
+  font-weight: bold;
+  position: absolute;
+  left: -1rem;
+}
+
+.company-info {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  border-left: 4px solid #667eea;
+}
+
+.company-info p {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.data-categories {
+  margin: 1.5rem 0;
+}
+
+.data-categories h4 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.purpose-table {
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+
+.purpose-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.purpose-table th {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.purpose-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #f0f0f0;
   color: #555;
   line-height: 1.6;
+}
+
+.purpose-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+.contact-info {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  border-left: 4px solid #667eea;
+}
+
+.contact-info p {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+.contact-info p:last-child {
+  margin-bottom: 0;
 }
 
 /* フッター */
@@ -343,6 +465,24 @@ body {
 
   .privacy-section {
     padding: 1.5rem;
+  }
+
+  .compliance-badges {
+    gap: 0.5rem;
+  }
+
+  .badge {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .purpose-table {
+    font-size: 0.9rem;
+  }
+
+  .purpose-table th,
+  .purpose-table td {
+    padding: 0.8rem;
   }
 }
 

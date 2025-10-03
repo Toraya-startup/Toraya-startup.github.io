@@ -14,34 +14,6 @@
 - `privacy.html` - プライバシーポリシー
 - `styles.css` - スタイルシート
 
-## GitHub Pages での自動デプロイ
-
-このサイトは GitHub Actions を使用して自動デプロイされます。
-
-### 自動デプロイの設定
-
-1. このリポジトリを GitHub にプッシュ
-2. リポジトリの「Settings」→「Pages」でソースを「GitHub Actions」に設定
-3. `main`ブランチにプッシュすると自動的にデプロイが実行されます
-
-### 手動でのローカル確認
-
-```bash
-# ローカルサーバーを起動
-npm start
-# または
-python3 -m http.server 8000
-```
-
-ブラウザで `http://localhost:8000` にアクセスしてサイトを確認できます。
-
-## 技術仕様
-
-- 静的 HTML サイト
-- レスポンシブデザイン対応
-- 日本語フォント（Noto Sans JP）使用
-- 日本のビジネス慣習に配慮したデザイン
-
 ## ライセンス
 
-© 2024 寅屋スタートアップ. All rights reserved.
+© 2025 寅屋スタートアップ. All rights reserved.
