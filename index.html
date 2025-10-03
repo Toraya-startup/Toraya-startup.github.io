@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>寅屋スタートアップ</title>
+    <title><span id="company-name-title">寅屋スタートアップ</span></title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,7 @@
 <body>
     <header class="header">
         <div class="container">
-            <h1 class="logo">寅屋スタートアップ</h1>
+            <h1 class="logo"><span id="company-name-logo">寅屋スタートアップ</span></h1>
             <nav class="nav">
                 <a href="index.html" class="nav-link active">ホーム</a>
                 <a href="privacy.html" class="nav-link">プライバシーポリシー</a>
@@ -90,7 +90,7 @@
                     お気軽にお問い合わせください。
                 </p>
                 <div class="contact-info">
-                    <p>Email: info@toraya-startup.com</p>
+                    <p>Email: <span id="company-email-contact">info@toraya-startup.com</span></p>
                 </div>
             </div>
         </section>
@@ -98,8 +98,20 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 寅屋スタートアップ. All rights reserved.</p>
+            <p>&copy; 2025 <span id="company-name-footer">寅屋スタートアップ</span>. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- 設定ファイルの読み込み -->
+    <script src="config.js"></script>
+    <script>
+        // 事業者情報を動的に設定
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('company-name-title').textContent = COMPANY_CONFIG.name;
+            document.getElementById('company-name-logo').textContent = COMPANY_CONFIG.name;
+            document.getElementById('company-name-footer').textContent = COMPANY_CONFIG.name;
+            document.getElementById('company-email-contact').textContent = COMPANY_CONFIG.email;
+        });
+    </script>
 </body>
 </html>
