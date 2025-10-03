@@ -1,0 +1,23 @@
+{
+  "name": "toraya-startup-corporate",
+  "version": "1.0.0",
+  "description": "寅屋スタートアップ - 企業サイト",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "serve": "python3 -m http.server 8000"
+  },
+  "keywords": [
+    "corporate",
+    "website",
+    "shopify",
+    "app-development"
+  ],
+  "author": "寅屋スタートアップ",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/toraya-corporate.git"
+  },
+  "homepage": "https://username.github.io/toraya-corporate"
+}
