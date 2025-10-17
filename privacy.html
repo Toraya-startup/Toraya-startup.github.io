@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プライバシーポリシー - <span id="company-name">[事業者名]</span></title>
+    <title>プライバシーポリシー - [事業者名]</title>
     <link rel="icon" type="image/png" href="public/icon.png">
     <style>
         body {
@@ -68,6 +68,7 @@
     <div class="nav">
         <a href="index.html">ホーム</a>
         <a href="privacy.html">プライバシーポリシー</a>
+        <a href="en.privacy.html">Privacy Policy (EN)</a>
     </div>
 
     <h1>プライバシーポリシー</h1>
@@ -121,11 +122,11 @@
     <p>本ポリシーに関するお問い合わせは、下記の窓口までお願いいたします。</p>
     <div class="contact-info">
         <p><strong>事業者名：</strong> <span id="company-name-contact">[事業者名]</span></p>
-        <p><strong>連絡先：</strong> <span id="company-email">[メールアドレス等]</span></p>
+        <p><strong>連絡先：</strong> <span id="company-email">[メールアドレス]</span></p>
     </div>
 
     <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; color: #666;">
-        <p>&copy; 2025 <span id="company-name-footer">寅屋スタートアップ</span>. All rights reserved.</p>
+        <p>&copy; 2025 <span id="company-name-footer">[事業者名]</span>. All rights reserved.</p>
     </div>
 
     <!-- 設定ファイルの読み込み -->
@@ -133,10 +134,13 @@
     <script>
         // 事業者情報を動的に設定
         document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('company-name').textContent = COMPANY_CONFIG.name;
-            document.getElementById('company-name-main').textContent = COMPANY_CONFIG.name;
-            document.getElementById('company-name-contact').textContent = COMPANY_CONFIG.name;
-            document.getElementById('company-name-footer').textContent = COMPANY_CONFIG.name;
+            // タイトルを動的に設定
+            document.title = 'プライバシーポリシー - ' + COMPANY_CONFIG.name;
+            
+            // 各要素のテキストを動的に設定
+            document.getElementById('company-name-main').textContent = COMPANY_CONFIG.jp_name;
+            document.getElementById('company-name-contact').textContent = COMPANY_CONFIG.jp_name;
+            document.getElementById('company-name-footer').textContent = COMPANY_CONFIG.jp_name;
             document.getElementById('company-email').textContent = COMPANY_CONFIG.email;
         });
     </script>
